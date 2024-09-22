@@ -10,12 +10,13 @@ from .testing import *
 from functools import partial
 from .env import NUKE_USER
 
-
 update_menu_at_start = False
 path = os.path.join(NUKE_USER, 'nuke_comfyui')
 
 
 def setup():
+    properties_menu.init_menu()
+
     icon = '{}/icons/comfyui_icon.png'.format(path)
     comfyui_menu = nuke.menu('Nodes').addMenu('ComfyUI', icon=icon)
 

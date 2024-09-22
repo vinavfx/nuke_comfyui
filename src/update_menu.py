@@ -182,7 +182,8 @@ def create_node(data, inpanel=True):
         })
 
 
-    nuke.createNode('Output', inpanel=False)
+    output = nuke.createNode('Output', inpanel=False)
+    output.setSelected(False)
     n.end()
 
     data_knob = nuke.PyScript_Knob('data')
